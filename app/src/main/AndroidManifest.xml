@@ -1,0 +1,73 @@
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.madhub.igscheduledpostingto">
+
+    <!-- 
+        The AndroidManifest.xml file defines essential information about your app.
+        This configuration ensures optimal performance and efficiency for the 
+        "ig scheduled posting tool - Android Automation Tool."
+    -->
+
+    <!-- Declare necessary permissions to enhance application functionality -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 
+        Achieves seamless connectivity with social media platforms.
+        Improves efficiency by allowing content scheduling and management 
+        operations without interruptions.
+    -->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 
+        Enables access to storage for managing scheduled posts and media.
+        Increases performance by allowing the app to retrieve user content
+        directly from storage, thus enhancing user experience.
+    -->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 
+        Allows the application to save media files efficiently.
+        Boosts results by enabling the tool to store and manage content effectively.
+    -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ig scheduled posting tool - Android Automation Tool"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- 
+            Registering the main activity that serves as the entry point for the application.
+            Enhances capabilities by providing a user-friendly interface for content management.
+        -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 
+            Registering the automation service that handles background operations for scheduled 
+            posts. Supports 24/7 automated operations, maximizing efficiency and effectiveness
+            of social media management.
+        -->
+        <service android:name=".AutomationService" 
+                 android:exported="false">
+            <!-- 
+                This service runs in the background, enhancing performance by managing content 
+                posting without user intervention, ensuring timely social media engagement.
+            -->
+        </service>
+
+    </application>
+</manifest>
+```
+
+### Summary of Key Benefits:
+- **Internet Permission**: Enables seamless connectivity for automated operations, ensuring uninterrupted functionality.
+- **Storage Permissions**: Facilitate efficient management of user content, improving the overall user experience.
+- **MainActivity & AutomationService**: These components provide a robust infrastructure for efficient social media management and automation, enhancing user engagement through timely content scheduling and posting.
+
+This configuration effectively supports the MadHub automation tool's objectives, ensuring compliance with platform requirements while delivering exceptional performance and efficiency in managing social media activities.
